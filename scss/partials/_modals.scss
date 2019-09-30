@@ -1,0 +1,369 @@
+.modal {
+  position: fixed;
+  z-index: 10;
+  top: 2em;
+  bottom: 2em;
+  left: 2em;
+  right: 2em;
+  box-shadow: 0 0 0 2em rgba(black, .5);
+  background-size: cover;
+  display: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.modal1 {
+  background-image: linear-gradient(rgba($accent1, 0.9)), url("../img/black.jpg");
+}
+
+.modal2 {
+  background-image: linear-gradient(rgba($accent2, 0.9)), url("../img/black.jpg");
+}
+
+.modal-close {
+  background: transparent;
+  position: absolute;
+  right: 2em;
+  top: 2em;
+  border: 0;
+  z-index: 15;
+  cursor: pointer;
+
+  img {
+    width: 2em;
+  }
+}
+
+.modal-content {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.modal-title {
+  text-align: left;
+  padding: 1.5em 1em 0 2em;
+}
+
+// vertical architecture modal
+
+.modal--vertical-architecture {
+  .modal-content {
+    display: grid;
+    grid-template-columns: [left] 1fr [center] 1fr [right];
+    place-items: center;
+  }
+
+  .text-content {
+    padding-bottom: 2em;
+  }
+
+  .column {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .polygons1 {
+    max-width: 30em;
+    align-self: center;
+  }
+
+  .polygons2 {
+    max-width: 40em;
+  }
+}
+
+// green architecture modal
+
+.modal--green-architecture {
+  .text-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text-box {
+    width: 40%;
+  }
+
+  .text-box2 {
+    width: 50%;
+  }
+
+  .img {
+    position: absolute;
+    left: 2em;
+    bottom: .1em;
+    width: 90vw;
+  }
+}
+
+// green transportation modal
+
+.modal--green-transportation {
+  .text-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .img-box {
+    width: 90%;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .img1 {
+    max-height: 26em;
+  }
+
+  .img2 {
+    max-height: 25em;
+  }
+
+  .text-box {
+    width: 48%;
+  }
+}
+
+// public transportation modal
+
+.modal--public-transportation {
+  overflow-y: scroll;
+
+  .text-content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .column {
+    width: 45%;
+  }
+
+  .hyperloop {
+    width: 100%;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+
+  .img1 {
+    width: 40%;
+    position: absolute;
+    left: 8em;
+    z-index: 11;
+  }
+
+  .img2 {
+    width: 55%;
+    position: absolute;
+    right: 0;
+  }
+}
+
+// green infrastructure modal
+
+.modal--green-infrastructure {
+
+  .modal-content {
+    display: flex;
+  }
+
+  .text-content {
+    width: 40%;
+  }
+
+  .cycle-paths {
+    position: absolute;
+    top: 3em;
+    right: 5em;
+  }
+
+  .smart-roads {
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    width: 30%;
+  }
+
+  .charging-stations {
+    position: absolute;
+    right: 10em;
+    bottom: 3em;
+  }
+}
+
+// sustainable aviation modal
+
+.modal--sustainable-aviation {
+  .modal-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .airport {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .column {
+    width: 45%;
+    height: 70vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    justify-content: space-between;
+  }
+
+  .text-box {
+    width: 90%;
+  }
+}
+
+// orbital rings modal
+
+.modal--orbital-rings {
+  .modal-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .column {
+    width: 40%;
+  }
+
+  .orbital-rings {
+    max-height: 45em;
+    border-radius: 30px;
+  }
+}
+
+// renewable resources
+
+.modal--renewable-resources {
+  .text-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column {
+    width: 45%;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+
+  .city {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+// alternative energy
+
+.modal--alternative-energy {
+  .modal-content {
+    display: flex;
+    justify-content: left;
+  }
+
+  .column {
+    width: 45%;
+  }
+
+  .column2 {
+    padding-left: 5em;
+    align-self: center;
+  }
+
+  .img {
+    position: absolute;
+  }
+
+  .nuclear-fusion {
+    top: 2em;
+    right: 2em;
+    width: 23em;
+  }
+
+  .algae {
+    width: 10em;
+    bottom: 0;
+  }
+
+  .city-corner {
+    bottom: 0;
+    right: 0;
+    width: 40em;
+  }
+}
+
+// waste management
+
+.modal--waste-management {
+  .modal-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column {
+    width: 45%;
+  }
+
+  .img {
+    position: absolute;
+  }
+
+  .plastic {
+    padding-top: 3em;
+    width: 70%;
+  }
+
+  .green-pile {
+    bottom: 0;
+    left: 0;
+    width: 70%;
+  }
+
+  .hands {
+    bottom: 0;
+    right: 0;
+    width: 30%;
+  }
+}
+
+// waste to energy
+
+.modal--waste-to-energy {
+  .column {
+    width: 35%;
+  }
+
+  .city {
+    position: absolute;
+    width: 60%;
+    right: 5em;
+    bottom: 5em;
+  }
+}
+
+@keyframes modalIn {
+  0% { opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes modalOut {
+  0% { opacity: 1;}
+  100% {opacity: 0;}
+}
