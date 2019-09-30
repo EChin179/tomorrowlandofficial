@@ -361,36 +361,36 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 4.75rem;
+  font-size: 4rem;
   letter-spacing: .8rem;
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   letter-spacing: .4rem;
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: .2rem;
 }
 
 h4 {
   font-family: "Crimson Text", serif;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 400;
   font-style: italic;
   letter-spacing: .1rem;
   text-align: left;
-  margin-top: .5em;
-  margin-bottom: .5em;
+  margin-top: 1em;
+  margin-bottom: .3em;
 }
 
 p, li {
   font-family: 'Raleway';
-  font-size: 1.1rem;
+  font-size: .9rem;
   text-align: left;
-  line-height: 1.7rem;
+  line-height: 1.4rem;
 }
 
 li {
@@ -418,7 +418,7 @@ button {
 }
 
 .logo {
-  width: 5em;
+  width: 4em;
 }
 
 .row {
@@ -432,7 +432,7 @@ button {
   -ms-flex-align: center;
   align-items: center;
   padding: 2em;
-  padding-left: 3em;
+  padding-left: 2.5em;
 }
 
 .nav {
@@ -452,8 +452,8 @@ button {
 .nav a {
   font-family: "gilroy", sans-serif;
   text-transform: uppercase;
-  font-size: 1.2rem;
-  letter-spacing: .2rem;
+  font-size: 1rem;
+  letter-spacing: .1rem;
 }
 
 .nav a:hover, .nav a:focus {
@@ -462,7 +462,7 @@ button {
 }
 
 .title {
-  line-height: 65vh;
+  line-height: 58vh;
 }
 
 body {
@@ -529,15 +529,12 @@ body {
   height: 100%;
 }
 
-.subsection h3 {
-  margin-bottom: 1em;
-}
-
 .subsection a {
   text-decoration: underline;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-style: italic;
   letter-spacing: .1rem;
+  line-height: 2.5em;
 }
 
 .subsection1 {
@@ -577,13 +574,16 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 3em 0;
+}
+
+.contact-title {
+  padding: 1em;
 }
 
 .contact-form-text {
   display: block;
   width: 100%;
-  padding: 1em;
+  padding: .8em;
   margin-bottom: 2em;
   border: none;
   opacity: .8;
@@ -595,7 +595,7 @@ body {
 }
 
 .btn {
-  padding: 1.2em 3em;
+  padding: .8em 3em;
   border: none;
   background-color: #5B6D84;
   color: #FFFFFF;
@@ -656,7 +656,7 @@ body {
 }
 
 .modal-close img {
-  width: 2em;
+  width: 1.5em;
 }
 
 .modal-content {
@@ -695,14 +695,14 @@ body {
 }
 
 .modal--vertical-architecture .polygons1 {
-  max-width: 30em;
+  max-width: 21em;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
 }
 
 .modal--vertical-architecture .polygons2 {
-  max-width: 40em;
+  max-width: 30em;
 }
 
 .modal--green-architecture .text-content {
@@ -719,14 +719,14 @@ body {
 }
 
 .modal--green-architecture .text-box2 {
-  width: 50%;
+  width: 55%;
 }
 
 .modal--green-architecture .img {
   position: absolute;
-  left: 2em;
-  bottom: .1em;
-  width: 90vw;
+  left: 0em;
+  bottom: 0em;
+  width: 97vw;
 }
 
 .modal--green-transportation .text-content {
@@ -739,7 +739,7 @@ body {
 }
 
 .modal--green-transportation .img-box {
-  width: 90%;
+  width: 85%;
   float: right;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -753,11 +753,11 @@ body {
 }
 
 .modal--green-transportation .img1 {
-  max-height: 26em;
+  max-height: 20em;
 }
 
 .modal--green-transportation .img2 {
-  max-height: 25em;
+  max-height: 15em;
 }
 
 .modal--green-transportation .text-box {
@@ -815,6 +815,7 @@ body {
   position: absolute;
   top: 3em;
   right: 5em;
+  width: 25em;
 }
 
 .modal--green-infrastructure .smart-roads {
@@ -828,9 +829,11 @@ body {
   position: absolute;
   right: 10em;
   bottom: 3em;
+  width: 25em;
 }
 
 .modal--sustainable-aviation .modal-content {
+  padding-top: 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -847,6 +850,10 @@ body {
   border-radius: 20px;
 }
 
+.modal--sustainable-aviation .airplane {
+  width: 100%;
+}
+
 .modal--sustainable-aviation .column {
   width: 45%;
   height: 70vh;
@@ -861,26 +868,28 @@ body {
 }
 
 .modal--sustainable-aviation .text-box {
-  width: 90%;
+  width: 80%;
 }
 
 .modal--orbital-rings .modal-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  width: 80%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
 .modal--orbital-rings .column {
-  width: 40%;
+  width: 48%;
 }
 
 .modal--orbital-rings .orbital-rings {
-  max-height: 45em;
+  max-height: 35em;
   border-radius: 30px;
 }
 
@@ -935,18 +944,19 @@ body {
 .modal--alternative-energy .nuclear-fusion {
   top: 2em;
   right: 2em;
-  width: 23em;
+  width: 20em;
 }
 
 .modal--alternative-energy .algae {
   width: 10em;
   bottom: 0;
+  right: 40%;
 }
 
 .modal--alternative-energy .city-corner {
   bottom: 0;
   right: 0;
-  width: 40em;
+  width: 30em;
 }
 
 .modal--waste-management .modal-content {
@@ -984,12 +994,13 @@ body {
 }
 
 .modal--waste-to-energy .column {
+  padding-top: 1em;
   width: 35%;
 }
 
 .modal--waste-to-energy .city {
   position: absolute;
-  width: 60%;
+  width: 58%;
   right: 5em;
   bottom: 5em;
 }
