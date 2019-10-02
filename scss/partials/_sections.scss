@@ -12,6 +12,11 @@ body {
   grid-template-columns: [left] 1fr [center] 1fr [right];
   grid-template-rows: [top] 1fr [mid] 1fr [bottom];
   align-items: center;
+
+  @include mq-m {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .section--three {
@@ -25,6 +30,12 @@ body {
   line-height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url("../img/section-bg.jpg");
   background-size: cover;
+
+  @include mq-m {
+    height: 33.3333%;
+    line-height: 30vh;
+    width: 100%;
+  }
 }
 
 .section-title--right {
@@ -37,6 +48,11 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+
+  @include mq-m {
+    height: 33.3333%;
+    width: 100%;
+  }
 
   a {
     text-decoration: underline;

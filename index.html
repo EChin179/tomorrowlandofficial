@@ -20,15 +20,15 @@
 
           <img src="img/logo.png" alt="Tomorrowland Logo" class="logo">
 
-          <nav>
-            <ul class="nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#architecture">Architecture</a></li>
-              <li><a href="#transportation">Transportation</a></li>
-              <li><a href="#aviation">Aviation</a></li>
-              <li><a href="#energy">Energy</a></li>
-              <li><a href="#waste">Waste</a></li>
-              <li><a href="#contact">Contact</a></li>
+          <nav class="nav">
+            <ul class="styled-list">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="#architecture">Architecture</a></li>
+              <li><a class="nav-link" href="#transportation">Transportation</a></li>
+              <li><a class="nav-link" href="#aviation">Aviation</a></li>
+              <li><a class="nav-link" href="#energy">Energy</a></li>
+              <li><a class="nav-link" href="#waste">Waste</a></li>
+              <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
           </nav>
 
@@ -62,8 +62,7 @@
           <button class="modal-close"><img src="img/close.png" alt=""></button>
           <h3 class="modal-title">the case for vertical architecture</h3>
           <div class="modal-content">
-            <div class="column">
-              <div class="text-content">
+            <div class="column column--text">
                 <h4>when there's no where else to go, we go up.</h4>
                 <p>Vertical Urban Planning:</p><br>
                 <ul>
@@ -73,12 +72,6 @@
                   <li>Less traffic fatalities and jams</li>
                   <li>Preserves land for food production, nature, and recreation</li>
                 </ul>
-              </div>
-              <img class="polygons2" src="img/polygons2.png" alt="underground structure split into polygons">
-            </div>
-            <div class="column">
-              <img class="polygons1" src="img/polygons1.png" alt="tall buildings split into polygons">
-              <div class="text-content">
                 <h4>...or down.</h4>
                 <p>If we find that the sky may indeed have a limit, underground architecture fortunately allows us to go much further down than we can go up:</p><br>
                 <ul>
@@ -88,6 +81,10 @@
                   <li>Control erosion, sedimentation, and runoff by covering the site with vegetation</li>
                   <li>Conserve existing natural areas, promoting biodiversity</li>
                 </ul>
+            </div>
+            <div class="column column--img">
+              <img class="img polygons1" src="img/polygons1.png" alt="tall buildings split into polygons">
+              <img class="img polygons2" src="img/polygons2.png" alt="underground structure split into polygons">
               </div>
             </div>
           </div>
@@ -279,7 +276,6 @@
             <div class="img-box">
               <img class="cycle-paths" src="img/cycling.png" alt="a group of people riding bicycles">
               <img class="smart-roads" src="img/smart-roads.png" alt="a sketch of a city with wifi signals coming out of cars, phones, bikes, etc.">
-              <img class="charging-stations" src="img/charging-stations.png" alt="a red car charging through an EV charging station">
             </div>
           </div>
         </div>
@@ -310,15 +306,14 @@
               <div class="text-box">
                 <h4>sustainable aviation fuels.</h4>
                 <p>The global aviation industry produces around 2% of all human-induced CO2 emissions, and 12% of CO2 emissions from all transport sources, relative to 74% from road transport. Sustainable alternative fuels, or ‘biofuels’, are types of fuels that can greatly reduce the carbon intensity of air travel, produce fewer sulfur emissions, and can save up to 80% in emissions over the lifecycle of the fuel. They are derived from renewable sources, ranging from plant oils and solid municipal waste, to purpose-grown biomass and agricultural residues.</p>
-              </div>
-              <img class="airplane" src="img/airplane.png" alt="flying blue and white airplane">
-            </div>
-            <div class="column">
-              <img class="airport" src="img/airport.jpg" alt="futuristic green airport rendering">
               <div class="text-box">
                 <h4>designing airports.</h4>
                 <p>To be more eco-friendly, airports can be fitted with electric charging stations, rainwater capturing stations, and energy efficient LCD screens on monitors. They should be built from recycled building material, and have a heat reflecting roof, low-flow water faucets, and runways made of eco-friendly asphalt.</p>
               </div>
+              </div>
+            </div>
+            <div class="img-box">
+              <img class="airport" src="img/airport.jpg" alt="futuristic green airport rendering">
             </div>
           </div>
         </div>
@@ -339,7 +334,7 @@
           <div class="modal-content">
             <div class="column">
               <h4>orbital rings.</h4>
-              <p>The orbital ring is a strong steel cable in orbit just above the atmosphere—80km above Earth. It rotates, creating forces which try to make the ring fly apart into space, while gravity tries to pull it down to Earth. If spun at the correct speed, the two forces balance one another, allowing it to rotate seemingly weightlessly. A “cuff” can be built around the cable which would hold itself in place, unmoving, by magnetic repulsion. The structure would be connected to the ground by cables, with an elevator giving access to the ring in less than an hour.<br><br>Two Maglev train tracks—using magnets to move trains without friction—on the underside of the ring and another on the outside could transport passengers at incredible speeds, reaching the other side of the world in 45 minutes.</p><br><br>
+              <p>The orbital ring is a strong steel cable in orbit just above the atmosphere—80km above Earth. It rotates, creating forces which try to make the ring fly apart into space, while gravity tries to pull it down to Earth. If spun at the correct speed, the two forces balance one another, allowing it to rotate seemingly weightlessly. A “cuff” can be built around the cable which would hold itself in place, unmoving, by magnetic repulsion. The structure would be connected to the ground by cables, with an elevator giving access to the ring in less than an hour.<br><br>Two Maglev train tracks—using magnets to move trains without friction—on the underside of the ring and another on the outside could transport passengers at incredible speeds, reaching the other side of the world in 45 minutes.</p>
               <h4>...too ambitious?</h4>
               <p>Despite the seemingly outlandish nature of this solution, remember that the world’s current course towards the expansion of carbon-intensive air travel is just as unrealistic if we hope to avoid catastrophic climate change.</p>
             </div>
@@ -401,17 +396,16 @@
               <h4>human power.</h4>
               <p>With over seven billion people walking the Earth today, harnessing energy and generating power from this movement could possibly be one of the energy sources of the future.</p>
               <h4>hydrogen power.</h4>
-              <p>Hydrogen is a clean and potent source of energy, and accounts for 74% of the mass of the entire universe. The only problem is that hydrogen atoms tend to only be found in combinations with oxygen, carbon, and nitrogen atoms. Removing this bond takes energy, which ends up being counter-productive. As a result, many people around the world are working on making these processes more effective.</p>
+              <p>Hydrogen is a clean and potent source of energy, and accounts for 74% of the mass of the entire universe. The only problem is that removing bonds of hydrogen atoms from oxygen, carbon, and nitrogen atoms takes energy, and ends up being counter-productive. People around the world are working on making these processes more effective.</p>
               <h4>magma power.</h4>
-              <p>The center of the Earth has the temperature of 6000 degrees Celsius, and tapping into that geothermal heat could very well be another possible source of energy for the future.</p>
+              <p>The center of the Earth has the temperature of 6000 degrees Celsius, and tapping into that geothermal heat could be another possible source of energy for the future.</p>
               <h4>algae power.</h4>
-              <p>Algae grows almost everywhere, they are also a surprising source of energy-rich oils. Up to 9,000 gallons of biofuel can be “grown” per acre, making it one of many potential energy sources of the future.</p>
+              <p>Algae grows almost everywhere, they are also a surprising source of energy-rich oils. Up to 9,000 gallons of biofuel can be “grown” per acre.</p>
             </div>
-            <div class="column column2">
+            <div class="column2">
               <h4>fusion power.</h4>
               <p>Fusion is the reaction that powers the Sun. It’s produced when two light atoms fuse into one under extreme pressure and temperature. Fusion has the potential to deliver much more power than nuclear fission, but without the long-lasting radioactive waste. With its potential of offering an inexhaustible supply of zero-carbon energy, nuclear fusion is still difficult to scale because the process still requires more power than it generates with existing technology.<br><br>Nuclear fusion as a power source has never been given the necessary funding to develop it to fruition, but it's the one physically possible solution to our energy needs with no obvious downsides. The physics works out beautifully; all that is needed is proper investment and engineering breakthroughs.</p>
             </div>
-            <img class="img nuclear-fusion" src="img/nuclear.png" alt="nuclear power plant">
             <img src="img/algae.png" alt="algae" class="img algae">
             <img src="img/city3.png" alt="city corner" class="img city-corner">
           </div>
@@ -450,7 +444,6 @@
               <img class="plastic" src="img/recycle2.png" alt="plastic bottles">
             </div>
             <img src="img/recycle3.png" alt="a pile of green waste, plastic, and trash" class="img green-pile">
-            <img src="img/human.png" alt="7 hands reaching up towards the earth" class="img hands">
           </div>
         </div>
 
@@ -496,12 +489,13 @@
 
     </section>
 
-    <script src="js/modal.js"></script>
-    <script src="js/fullpage.js"></script>
     <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/fullpage.js"></script>
+    <script src="js/nav.js"></script>
 
   </body>
 </html>

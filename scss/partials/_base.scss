@@ -19,16 +19,42 @@ h1, h2, h3 {
 h1 {
   font-size: 4rem;
   letter-spacing: .8rem;
+
+  @include mq-d {
+    font-size: 3rem;
+  }
+
+  @include mq-m {
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+  }
 }
 
 h2 {
   font-size: 3rem;
   letter-spacing: .4rem;
+
+  @include mq-m {
+    font-size: 1.3rem;
+  }
+
+  @include mq-d {
+    font-size: 2rem;
+    letter-spacing: .2rem
+  }
 }
 
 h3 {
   font-size: 2rem;
   letter-spacing: .2rem;
+
+  @include mq-d {
+    font-size: 1.5rem;
+  }
+
+  @include mq-m {
+    font-size: 1.3rem;
+  }
 }
 
 h4 {
@@ -40,6 +66,10 @@ h4 {
   text-align: left;
   margin-top: 1em;
   margin-bottom: .3em;
+
+  @include mq-m {
+    font-size: 1.1rem;
+  }
 }
 
 p, li {
@@ -47,17 +77,34 @@ p, li {
   font-size: .9rem;
   text-align: left;
   line-height: 1.4rem;
+
+  @include mq-m {
+    font-size: .7rem;
+    line-height: 1rem;
+  }
+
+  @include mq-d {
+    font-size: .8rem;
+    line-height: 1.3rem;
+  }
+
+  @include mq-w {
+    font-size: 1rem;
+  }
 }
 
 li {
   list-style-position: inside;
-  padding-left: 25px;
 }
 
 a {
   text-decoration: none;
   font-family: $ffs;
   color: $white;
+
+  @include mq-w {
+    font-size: 1.3rem;
+  }
 }
 
 button {

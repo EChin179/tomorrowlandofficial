@@ -1,0 +1,55 @@
+// media query for 500px (extra mobile)
+
+@mixin mq-xm($width: 32rem) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+// media query for 768px (mobile)
+
+@mixin mq-m($width: 48rem) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+// media query for 1000px (small)
+
+@mixin mq-s($width: 58rem) {
+  @media(max-width: $width) {
+    @content;
+  }
+}
+
+// media query for 1100px (desktop)
+
+@mixin mq-d($width: 68.75rem) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+// media query for 1600px (wide)
+
+@mixin mq-w($width: 100rem) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// media query for 2000px (extra wide)
+
+@mixin mq-xw($width: 125rem) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+// media query for (extra extra wide)
+
+@mixin mq-xxw($width: 150rem) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

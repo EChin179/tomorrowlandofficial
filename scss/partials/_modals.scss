@@ -9,7 +9,14 @@
   background-size: cover;
   display: none;
   overflow-x: hidden;
-  overflow-y: hidden;
+  scrollbar-width: thin;
+
+  @include mq-m {
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+  }
 
   &.is-open {
     display: block;
@@ -33,19 +40,36 @@
   z-index: 15;
   cursor: pointer;
 
+  @include mq-m {
+    top: 1em;
+    right: 1em;
+  }
+
   img {
     width: 1.5em;
+
+    @include mq-m {
+      width: 1em;
+    }
   }
 }
 
 .modal-content {
   margin: 0 auto;
   width: 85%;
+  padding-bottom: 2em;
 }
 
 .modal-title {
   text-align: left;
   padding: 1.5em 1em 0 2em;
+
+  @include mq-m {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 13em;
+    padding: 2em 0 1em;
+  }
 }
 
 // vertical architecture modal
@@ -55,6 +79,10 @@
     display: grid;
     grid-template-columns: [left] 1fr [center] 1fr [right];
     place-items: center;
+
+    @include mq-s {
+      display: block;
+    }
   }
 
   .text-content {
@@ -62,19 +90,27 @@
   }
 
   .column {
-    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+  }
+
+  .column--img {
+    @include mq-s {
+      display: none;
+    }
   }
 
   .polygons1 {
-    max-width: 21em;
+    width: 60%;
     align-self: center;
+    transform: translateY(-2em);
   }
 
   .polygons2 {
-    max-width: 30em;
+    align-self: center;
+    transform: translateY(1em);
+    width: 80%;
   }
 }
 
@@ -84,14 +120,32 @@
   .text-content {
     display: flex;
     justify-content: space-between;
+
+    @include mq-d {
+      padding-top: 1em;
+    }
+
+    @include mq-m {
+      padding: 0;
+      flex-direction: column;
+    }
   }
 
   .text-box {
     width: 40%;
+    padding-right: 1em;
+
+    @include mq-s {
+      width: 100%;
+    }
   }
 
   .text-box2 {
     width: 55%;
+
+    @include mq-s {
+      width: 100%;
+    }
   }
 
   .img {
@@ -99,6 +153,10 @@
     left: 0em;
     bottom: 0em;
     width: 97vw;
+
+    @include mq-xm {
+      display: none;
+    }
   }
 }
 
@@ -107,27 +165,48 @@
 .modal--green-transportation {
   .text-content {
     display: flex;
+    padding-bottom: 2em;
     justify-content: space-between;
+
+    @include mq-d {
+      flex-direction: column;
+    }
   }
 
   .img-box {
-    width: 85%;
-    float: right;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mq-d {
+      display: none;
+    }
   }
 
   .img1 {
+    position: absolute;
+    bottom: 3em;
+    left: 20%;
     max-height: 20em;
+
+    @include mq-d(75rem) {
+      max-height: 15em;
+    }
   }
 
   .img2 {
-    max-height: 15em;
+    position: absolute;
+    bottom: 3em;
+    right: 10%;
+    max-height: 30%;
+
+    @include mq-d(75rem) {
+      max-height: 20%;
+    }
   }
 
   .text-box {
     width: 48%;
+
+    @include mq-d {
+      width: 100%;
+    }
   }
 }
 
@@ -139,10 +218,18 @@
   .text-content {
     display: flex;
     justify-content: space-around;
+
+    @include mq-s {
+      flex-direction: column;
+    }
   }
 
   .column {
     width: 45%;
+
+    @include mq-s {
+      width: 100%;
+    }
   }
 
   .hyperloop {
@@ -158,12 +245,20 @@
     position: absolute;
     left: 8em;
     z-index: 11;
+
+    @include mq-m {
+      display: none;
+    }
   }
 
   .img2 {
     width: 55%;
     position: absolute;
     right: 0;
+
+    @include mq-m {
+      display: none;
+    }
   }
 }
 
@@ -173,31 +268,37 @@
 
   .modal-content {
     display: flex;
+    padding-bottom: 2em;
   }
 
   .text-content {
-    width: 40%;
+    width: 63%;
+
+    @include mq-s {
+      width: 100%;
+    }
   }
 
   .cycle-paths {
     position: absolute;
     top: 3em;
     right: 5em;
-    width: 25em;
+    width: 28%;
+
+    @include mq-s {
+      display: none;
+    }
   }
 
   .smart-roads {
     position: absolute;
-    top: 40%;
-    right: 25%;
+    bottom: 5%;
+    right: 5%;
     width: 30%;
-  }
 
-  .charging-stations {
-    position: absolute;
-    right: 10em;
-    bottom: 3em;
-    width: 25em;
+    @include mq-s {
+      display: none;
+    }
   }
 }
 
@@ -207,30 +308,38 @@
   .modal-content {
     padding-top: 2em;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    @include mq-m {
+      padding: 0;
+    }
   }
 
   .airport {
-    width: 100%;
     border-radius: 20px;
-  }
+    max-width: 30em;
 
-  .airplane {
-    width: 100%;
+    @include mq-w {
+      width: 100%;
+    }
   }
 
   .column {
-    width: 45%;
-    height: 70vh;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    place-items: center;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 30em;
+
+    @include mq-m {
+      width: 100%;
+    }
   }
 
-  .text-box {
-    width: 80%;
+  .img-box {
+    display: flex;
+    align-items: center;
+    padding-left: 6em;
+
+    @include mq-d {
+      display: none;
+    }
   }
 }
 
@@ -239,18 +348,27 @@
 .modal--orbital-rings {
   .modal-content {
     display: flex;
-    width: 80%;
-    justify-content: space-between;
+    width: 90%;
+    justify-content: space-around;
     align-items: center;
   }
 
   .column {
-    width: 48%;
+    padding-right: 3em;
+    max-width: 50em;
+
+    @include mq-m {
+      padding: 0;
+    }
   }
 
   .orbital-rings {
-    max-height: 35em;
+    max-height: 75vh;
     border-radius: 30px;
+
+    @include mq-m {
+      display: none;
+    }
   }
 }
 
@@ -260,10 +378,18 @@
   .text-content {
     display: flex;
     justify-content: space-between;
+
+    @include mq-m {
+      flex-direction: column;
+    }
   }
 
   .column {
     width: 45%;
+
+    @include mq-m {
+      width: 100%;
+    }
   }
 
   span {
@@ -272,9 +398,13 @@
 
   .city {
     position: absolute;
-    width: 100%;
+    width: 85%;
     bottom: 0;
-    left: 0;
+    left: 7%;
+
+    @include mq-m {
+      display: none;
+    }
   }
 }
 
@@ -284,37 +414,57 @@
   .modal-content {
     display: flex;
     justify-content: left;
+
+    @include mq-s {
+      flex-direction: column;
+    }
   }
 
   .column {
-    width: 45%;
+    width: 125%;
+
+    @include mq-s {
+      width: 100%;
+    }
   }
 
   .column2 {
-    padding-left: 5em;
-    align-self: center;
+    width: 95%;
+    padding-left: 2em;
+
+    @include mq-s {
+      padding: 0;
+    }
+
   }
 
   .img {
     position: absolute;
-  }
 
-  .nuclear-fusion {
-    top: 2em;
-    right: 2em;
-    width: 20em;
+    @include mq-s {
+      display: none;
+    }
   }
 
   .algae {
-    width: 10em;
+    width: 8em;
     bottom: 0;
-    right: 40%;
+    right: 30%;
+
+    @include mq-w {
+      right: 40%;
+      width: 12em;
+    }
   }
 
   .city-corner {
     bottom: 0;
     right: 0;
-    width: 30em;
+    width: 18em;
+
+    @include mq-w {
+      width: 35em;
+    }
   }
 }
 
@@ -324,10 +474,18 @@
   .modal-content {
     display: flex;
     justify-content: space-between;
+
+    @include mq-m {
+      flex-direction: column;
+    }
   }
 
   .column {
     width: 45%;
+
+    @include mq-m {
+      width: 100%;
+    }
   }
 
   .img {
@@ -335,20 +493,26 @@
   }
 
   .plastic {
-    padding-top: 3em;
+    padding-top: 2em;
     width: 70%;
+
+    @include mq-m {
+      display: none;
+    }
   }
 
   .green-pile {
     bottom: 0;
-    left: 0;
-    width: 70%;
-  }
-
-  .hands {
-    bottom: 0;
     right: 0;
-    width: 30%;
+    width: 80%;
+
+    @include mq-m {
+      width: 100%;
+    }
+
+    @include mq-xm {
+      display: none;
+    }
   }
 }
 
@@ -357,14 +521,26 @@
 .modal--waste-to-energy {
   .column {
     padding-top: 1em;
-    width: 35%;
+    width: 45%;
+
+    @include mq-s {
+      width: 100%;
+    }
   }
 
   .city {
     position: absolute;
-    width: 58%;
+    width: 43%;
     right: 5em;
-    bottom: 5em;
+    bottom: 30%;
+
+    @include mq-d {
+      bottom: 5%;
+    }
+
+    @include mq-d {
+      display: none;
+    }
   }
 }
 
