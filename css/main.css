@@ -694,8 +694,8 @@ body {
   bottom: 2em;
   left: 2em;
   right: 2em;
-  -webkit-box-shadow: 0 0 0 2em rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 0 2em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 0 30em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 30em rgba(0, 0, 0, 0.5);
   background-size: cover;
   display: none;
   overflow-x: hidden;
@@ -708,6 +708,17 @@ body {
     bottom: 1em;
     left: 1em;
     right: 1em;
+  }
+}
+
+@media (min-width: 100rem) {
+  .modal {
+    max-width: 74em;
+    max-height: 50em;
+    left: 50%;
+    margin-left: -36.5em;
+    top: 50%;
+    margin-top: -25em;
   }
 }
 
@@ -881,7 +892,7 @@ body {
   position: absolute;
   left: 0em;
   bottom: 0em;
-  width: 97vw;
+  width: 100%;
 }
 
 @media (max-width: 32rem) {
@@ -932,7 +943,7 @@ body {
   position: absolute;
   bottom: 3em;
   right: 10%;
-  max-height: 30%;
+  max-height: 25%;
 }
 
 @media (max-width: 75rem) {
@@ -1073,18 +1084,12 @@ body {
 
 .modal--sustainable-aviation .airport {
   border-radius: 20px;
-  max-width: 30em;
-}
-
-@media (min-width: 100rem) {
-  .modal--sustainable-aviation .airport {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .modal--sustainable-aviation .column {
   width: 100%;
-  max-width: 30em;
+  max-width: 35em;
 }
 
 @media (max-width: 48rem) {
@@ -1133,7 +1138,7 @@ body {
 }
 
 .modal--orbital-rings .orbital-rings {
-  max-height: 75vh;
+  max-height: 70vh;
   border-radius: 30px;
 }
 
@@ -1238,28 +1243,15 @@ body {
 }
 
 .modal--alternative-energy .algae {
-  width: 8em;
+  width: 10em;
   bottom: 0;
-  right: 30%;
-}
-
-@media (min-width: 100rem) {
-  .modal--alternative-energy .algae {
-    right: 40%;
-    width: 12em;
-  }
+  right: 35%;
 }
 
 .modal--alternative-energy .city-corner {
   bottom: 0;
   right: 0;
-  width: 18em;
-}
-
-@media (min-width: 100rem) {
-  .modal--alternative-energy .city-corner {
-    width: 35em;
-  }
+  width: 25em;
 }
 
 .modal--waste-management .modal-content {
@@ -1308,7 +1300,7 @@ body {
 .modal--waste-management .green-pile {
   bottom: 0;
   right: 0;
-  width: 80%;
+  width: 100%;
 }
 
 @media (max-width: 48rem) {
@@ -1328,7 +1320,7 @@ body {
   width: 45%;
 }
 
-@media (max-width: 58rem) {
+@media (max-width: 68.75rem) {
   .modal--waste-to-energy .column {
     width: 100%;
   }

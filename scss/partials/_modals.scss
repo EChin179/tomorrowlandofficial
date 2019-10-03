@@ -5,7 +5,7 @@
   bottom: 2em;
   left: 2em;
   right: 2em;
-  box-shadow: 0 0 0 2em rgba(black, .5);
+  box-shadow: 0 0 0 30em rgba(black, .5);
   background-size: cover;
   display: none;
   overflow-x: hidden;
@@ -16,6 +16,15 @@
     bottom: 1em;
     left: 1em;
     right: 1em;
+  }
+
+  @include mq-w {
+    max-width: 74em;
+    max-height: 50em;
+    left: 50%;
+    margin-left: -36.5em;
+    top: 50%;
+    margin-top: -25em;
   }
 
   &.is-open {
@@ -152,7 +161,7 @@
     position: absolute;
     left: 0em;
     bottom: 0em;
-    width: 97vw;
+    width: 100%;
 
     @include mq-xm {
       display: none;
@@ -194,7 +203,7 @@
     position: absolute;
     bottom: 3em;
     right: 10%;
-    max-height: 30%;
+    max-height: 25%;
 
     @include mq-d(75rem) {
       max-height: 20%;
@@ -316,16 +325,12 @@
 
   .airport {
     border-radius: 20px;
-    max-width: 30em;
-
-    @include mq-w {
-      width: 100%;
-    }
+    width: 100%;
   }
 
   .column {
     width: 100%;
-    max-width: 30em;
+    max-width: 35em;
 
     @include mq-m {
       width: 100%;
@@ -363,7 +368,7 @@
   }
 
   .orbital-rings {
-    max-height: 75vh;
+    max-height: 70vh;
     border-radius: 30px;
 
     @include mq-m {
@@ -447,24 +452,15 @@
   }
 
   .algae {
-    width: 8em;
+    width: 10em;
     bottom: 0;
-    right: 30%;
-
-    @include mq-w {
-      right: 40%;
-      width: 12em;
-    }
+    right: 35%;
   }
 
   .city-corner {
     bottom: 0;
     right: 0;
-    width: 18em;
-
-    @include mq-w {
-      width: 35em;
-    }
+    width: 25em;
   }
 }
 
@@ -504,7 +500,7 @@
   .green-pile {
     bottom: 0;
     right: 0;
-    width: 80%;
+    width: 100%;
 
     @include mq-m {
       width: 100%;
@@ -523,7 +519,7 @@
     padding-top: 1em;
     width: 45%;
 
-    @include mq-s {
+    @include mq-d {
       width: 100%;
     }
   }
