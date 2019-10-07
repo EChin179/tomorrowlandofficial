@@ -638,6 +638,12 @@ body {
   align-items: center;
 }
 
+.contact .sources-link {
+  font-family: avenir;
+  margin-top: 2em;
+  text-decoration: underline;
+}
+
 .contact-form {
   width: 80vw;
   max-width: 50em;
@@ -1509,4 +1515,45 @@ nav {
   .hamburger.is-open::before {
     display: none;
   }
+}
+
+.sources-page {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 50, 55, 0.7))), url("../img/stars.jpg");
+  background-image: -webkit-linear-gradient(rgba(48, 50, 55, 0.7)), url("../img/stars.jpg");
+  background-image: -o-linear-gradient(rgba(48, 50, 55, 0.7)), url("../img/stars.jpg");
+  background-image: linear-gradient(rgba(48, 50, 55, 0.7)), url("../img/stars.jpg");
+  background-size: cover;
+  padding: 3em;
+}
+
+.sources-page * {
+  font-family: avenir;
+}
+
+.sources-page h1 {
+  letter-spacing: 0.3rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sources-page h2 {
+  letter-spacing: .3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1em 0;
+}
+
+.sources-page a {
+  line-height: 1.5rem;
+  text-decoration: underline;
+}
+
+.sources-page .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }

@@ -1,0 +1,32 @@
+.sources-page {
+  background-image: linear-gradient(rgba($gray, 0.7)), url("../img/stars.jpg");
+  background-size: cover;
+  padding: 3em;
+
+  * {
+    font-family: avenir;
+  }
+
+  h1 {
+    letter-spacing: 0.3rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    letter-spacing: .3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1em 0;
+  }
+
+  a {
+    line-height: 1.5rem;
+    text-decoration: underline;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+}

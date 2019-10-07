@@ -4,6 +4,12 @@
   background-size: cover;
   display: flex;
   align-items: center;
+
+  .sources-link {
+    font-family: avenir;
+    margin-top: 2em;
+    text-decoration: underline;
+  }
 }
 
 .contact-form {
@@ -46,4 +52,5 @@
   &:hover {
     background: $accent2;
   }
+
 }
